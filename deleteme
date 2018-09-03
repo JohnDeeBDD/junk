@@ -1,0 +1,73 @@
+<p>Forms are a part of every website that wants to collect information from the user. You need to understand how to style a form with CSS. How your site looks will have a tremendous impact on how your users interact with it.</p>
+<p>Don't let your website forms look like junk. Keep reading for your guide to modern CSS form styles!</p>
+<h2>What is CSS?</h2>
+<p>Cascading Style Sheets, or CSS styling, is a computer language that describes how elements in a browser should appear. They control the look, positioning, style and other effects of the page elements. CSS is used on <a href="https://www.webcodebuddy.com/157-10-css-codes-that-will-make-your-blog-stylish/">almost every single web page</a> in existence, so it's a good idea to know something about it!</p>
+<p>There are many CSS <strong>properties</strong>. The CSS properties are a list of effects that a browser can apply to the document. There are many different properties, and not every browser evaluates them exactly the same.</p>
+<p>One of the simplest CSS properties is called <strong>font-style</strong>, and a typical option is <strong>italic</strong>.</p>
+<ul>
+<li>This is regular text.</li>
+<li><span style="font-style: italic;">This is text with the font-style italic.</span></li>
+</ul>
+<p>The HTML for the italic looks like this:</p>
+<ul>
+<li>&lt;span style="font-style: italic;&gt;This is text with font-style italic.&lt;/span&gt;</li>
+</ul>
+<p>In the above example, we used inline CSS. That means that the CSS rules were inserted directly into the document "in line" with everything else.</p>
+<p>There are three main ways to add CSS. All three can accomplish the same thing but are used for different reasons. You should use the one that fits the specific situation.</p>
+<p><strong>inline</strong>. Inline styling means that the CSS code is placed within the element of the document to be styled. This is placed within the definition of the "style" attribute of the element. Like:</p>
+<ul>
+<li>&lt;span style="font-style: italic;"&gt;italic!&lt;/span&gt;</li>
+</ul>
+<p>You should use inline styling when there is only one instance of the thing you want to style.</p>
+<p><strong>internal.</strong> Internal style sheets are entire sheets contained within the HTML document. They go in the HEAD area of the document [although HTML5 allow style sheets to go anywhere].</p>
+<p><strong>external.</strong> Finally, the third type of CSS is an external style sheet. An external CSS file is accessed directly by the browser and integrated with the page linking to it before it is displayed. External style sheets usually have the extension ".css".</p>
+<p>External links go in the HEAD section of an HTML document. The code will tell the browser where to find the linked file. It looks like this:</p>
+<ul>
+<li>&lt;link&nbsp;rel="stylesheet" type="text/css" href="theme.css"&gt;</li>
+</ul>
+<p>You should use an external style sheet when you want the styles to be applied to multiple pages.</p>
+<h2>WordPress Styles</h2>
+<p>WordPress uses a theming system. Each theme is required to have a specific file called "styles.css". You can edit it directly by going into your admin backed and clicking</p>
+<ul>
+<li>Appearance &gt;&gt; Editor</li>
+</ul>
+<p>This will bring you to your theme's styles.css file in the text editor. You can make changes directly to your theme's CSS here.</p>
+<p>The WordPress <strong>styles.css</strong> is just a regular CSS style sheet, but it applied to the front end on every page and post on the site.</p>
+<p>If you are going to make changes to your theme like this, you need to do it in a child theme. A child theme won't be overwritten when the main theme is getting a maintenance update. There are <a href="https://wordpress.org/plugins/one-click-child-theme/">plugins in the .org repo</a> that will create a child theme on your site.</p>
+<p>The other way to directly change the CSS on a WordPress theme is by using the WordPress "customizer". To get to the Customizer go click:</p>
+<ul>
+<li>Appearance &gt;&gt; Customize</li>
+</ul>
+<p>Now you can make changes to the CSS elements of your site that your theme supports. The main thing to remember about the Customizer is that the changes are saved to the database. When you make changes to the theme via the editor, you save the changes directly to the theme files.</p>
+<h2>Common CSS Form Styles</h2>
+<p>Elements within a form are often assigned relative percentage widths. This is so the form itself can expand or contract to fit the element it is within. You might want to line up smaller width elements on the same line.</p>
+<p><strong>Width 100%:</strong></p>
+<p>&lt;input type = "text" width = "100%" /&gt;</p>
+<p><input size="100%" type="text" /></p>
+<p><strong>Width 2 Characters and 5 Characters:</strong></p>
+<p>Sometimes you'll want to declare the width in terms of character. You can use "size" and "maxlenght" for this. i.e. you might want to do this for a U.S. "state", being only a 2 character abbreviation, and "zip code" being a 5 character slot.</p>
+<p>&lt;input type = "text" width = "2" maxlenght = "2" /&gt;&nbsp;</p>
+<p>&lt;input type = "text" width = "5" maxlenght = "5" /&gt;</p>
+<p><input maxlength="2" size="2" type="text" placeholder="12" />&nbsp;<input maxlength="5" size="5" type="text" placeholder="12345" /></p>
+<h2>Colored Backgrounds</h2>
+<p>You can color the background and the font color with the background-color and color properties.</p>
+<p>&lt;input type = "text" style = "background-color: green; color: red;" placeholder = "Green with red!" /&gt;</p>
+<p><input style="background-color: green; color: red;" type="text" value="Green with red!" /></p>
+<h2>Focus</h2>
+<p>You can apply special effects when form elements are focused. Focus means that the user has clicked or selected the element. Focus is a "pseudo" property. It reflects the actions of the user and is a kind of "state" for the element.</p>
+<p>&lt;style&gt;<br />&nbsp; &nbsp;.blue:focus{background-color:lightblue;}<br />&lt;/style&gt;</p>
+<p>&lt;input type = "text" class = "blue" /&gt;</p>
+<p><input class="blue" type="text" /></p>
+<h2>JavaScript Libraries</h2>
+<p>Many developers use Javascript libraries to augment their frontend development. A Javascript library is a file, written in JS, that introduces new functions and abilities to the browser.</p>
+<p>A popular way to style forms is to use <a href="https://api.jquery.com/category/forms/">a library like jQuery</a>. jQuery is a popular Javascript library that is distributed with every WordPress installation in the admin backend.</p>
+<p>You can <a href="https://www.webcodebuddy.com/category/wordpress/">activate jQuery in your th</a>eme (if it's not already), and then use it to control great effects. There are many popular javascript libraries for controlling forms and other style elements.</p>
+<p>React, is the second most popular Javascript library and it is compatible with several specific React libraries for forms. JS libraries are particularly adept at rendering&nbsp;CSS table styling and other types of specialty UIs.</p>
+<ul>
+<li>Formsy<strong> React</strong> - This library handles validation and styling in a way that optimizes flexibility an reusability for CSS forms.</li>
+<li><strong>Redux Forms</strong> - This library puts all the form's properties into the React memory space</li>
+<li><strong>Formik</strong> - Formik is a React library that enables you to do Test Driven Development [TDD] and unit testing on your forms, straight from the browser.</li>
+</ul>
+<h2>Get Your Style On!</h2>
+<p>You don't want to get caught wearing last year's clothes on your body, or having last year's CSS form styles on your website. It's important to stay on top of all the latest trends and make your forms enticing to your audience.</p>
+<p>Keep reading <a href="https://www.webcodebuddy.com/category/web-design/">our web design blog</a> for advice on keeping your website up to date with all the latest trends!</p>
